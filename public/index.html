@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="如果我可以…… What If I Could… — a space for conversations you have imagined.">
+<title>如果我可以…… · What If I Could…</title>
+<link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+<header><div class="brand"><span class="brandmark">w.</span><span>WHAT IF I COULD…</span></div><nav class="lang" aria-label="Interface language"><button type="button" id="lang-zh" lang="zh-Hant" aria-pressed="true">繁體中文</button><button type="button" id="lang-en" lang="en" aria-pressed="false">English</button></nav></header>
+<main>
+<section id="setup-view">
+<div class="hero"><div class="hero-left"><div class="eyebrow" data-i18n="eyebrow"></div><h1 data-i18n="title"></h1><p class="subbrand" data-i18n="subtitle"></p><p class="intro-lead" data-i18n="lead"></p><figure class="story-art" aria-hidden="true"><img src="./assets/imagination-door.png" alt="" width="1536" height="1024" fetchpriority="high"></figure><div class="intro-copy"><p data-i18n="introShort"></p><details id="intro-details"><summary data-i18n="readIntro"></summary><div id="intro-original"></div></details></div><div class="quote-box"><span class="quotation">“</span><p data-i18n="quote"></p><small data-i18n="quoteSub"></small></div><div class="note" data-i18n="prototypeNote"></div></div>
+<div class="panel setup-panel"><div class="panel-head"><h2 data-i18n="setupTitle"></h2><span class="pill" data-i18n="setupBadge"></span></div>
+<form id="setup-form" novalidate>
+<div class="section-title"><span class="number">01</span><span data-i18n="you"></span></div>
+<div class="field"><label for="player-name" data-i18n="name"></label><div class="field-row"><input id="player-name" autocomplete="off" data-ph="namePlaceholder" maxlength="80"><button class="mic" type="button" data-target="player-name"></button></div></div>
+<div class="field"><label for="player-bg"><span data-i18n="aboutYou"></span> <span class="optional" data-i18n="optional"></span></label><div class="field-row"><textarea id="player-bg" data-ph="aboutPlaceholder" maxlength="5000"></textarea><button class="mic" type="button" data-target="player-bg"></button></div></div>
+<div class="section-title"><span class="number">02</span><span data-i18n="invite"></span></div><div id="roles"></div><button id="add-role" class="add" type="button" data-i18n="add"></button><p class="hint" data-i18n="inviteHint"></p>
+<div class="section-title"><span class="number">03</span><span data-i18n="sceneTitle"></span><span class="optional" data-i18n="optional"></span></div><div class="field"><label for="scene" data-i18n="sceneLabel"></label><div class="field-row"><textarea id="scene" data-ph="scenePlaceholder" maxlength="5000"></textarea><button class="mic" type="button" data-target="scene"></button></div></div>
+<div class="voice-settings"><label for="speech-language" data-i18n="voiceLanguage"></label><select id="speech-language"><option value="zh-TW">繁體中文（台灣）</option><option value="en-US">English (US)</option></select></div><p class="hint" data-i18n="languageHint"></p><div class="voice-status" id="setup-voice-status" role="status"></div><p class="error" id="setup-error" role="alert" hidden></p><button class="primary go" type="submit"><span data-i18n="go"></span><span class="arrow" aria-hidden="true">↗</span></button><p class="hint" style="text-align:center;margin-bottom:0" data-i18n="firstWord"></p></form></div></div>
+<section class="inspiration"><div class="inspiration-head"><div><div class="eyebrow" data-i18n="inspirationEyebrow"></div><h2 data-i18n="inspirationTitle"></h2></div><p data-i18n="inspirationSub"></p></div><div class="examples" id="examples"></div><p class="disclaimer" data-i18n="disclaimer"></p></section>
+</section>
+<section id="chat-view" hidden><div class="chat-shell"><div class="chat-top"><div><div class="eyebrow" data-i18n="chatEyebrow"></div><h1 data-i18n="title"></h1></div><button class="secondary" id="restart" type="button" data-i18n="restart"></button></div><div class="prototype"><strong data-i18n="previewLabel"></strong> <span data-i18n="previewChat"></span></div><div class="chatbox"><div class="roster" id="roster" aria-label="Participants"></div><div class="messages" id="messages" role="log" aria-live="polite"><div class="empty" id="chat-empty"><div class="asterisk" aria-hidden="true">✳</div><h2 data-i18n="emptyTitle"></h2><p data-i18n="emptyBody"></p></div></div><form class="composer" id="chat-form"><label for="chat-input" id="composer-label"></label><div class="field-row"><textarea id="chat-input" data-ph="chatPlaceholder" maxlength="10000"></textarea><button class="mic" type="button" data-target="chat-input"></button></div><div class="composer-controls"><p class="hint" data-i18n="sendHint"></p><button class="primary" type="submit"><span data-i18n="send"></span><span aria-hidden="true">↑</span></button></div><div class="voice-settings"><label for="chat-speech-language" data-i18n="voiceLanguage"></label><select id="chat-speech-language"><option value="zh-TW">繁體中文（台灣）</option><option value="en-US">English (US)</option></select></div><div class="voice-status" id="chat-voice-status" role="status"></div></form></div><p class="prototype" id="send-status" role="status" hidden></p><p class="disclaimer" data-i18n="disclaimer"></p></div></section>
+</main>
+<footer class="footer"><p data-i18n="privacy"></p><span class="credit">Design by bestappstore2026@gmail.com</span></footer>
+<div class="toast" id="toast" role="status" hidden></div>
+<dialog id="confirm-dialog"><h2 id="dialog-title"></h2><p id="dialog-body"></p><div class="dialog-actions"><button class="secondary" id="dialog-cancel" type="button" data-i18n="cancel"></button><button class="primary" id="dialog-confirm" type="button" data-i18n="confirm"></button></div></dialog>
+<script src="./assets/app.js" defer></script>
+</body></html>
